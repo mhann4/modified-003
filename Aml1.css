@@ -1,9 +1,9 @@
-/* Aml1.css — replacement version */
+/* Aml1.css — Final Locked Version: Light Green Title + Black Background */
 
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #f4f4f4;
+  background-color: #000000; /* Black background */
 }
 
 #slideMenu {
@@ -48,7 +48,7 @@ a {
 }
 
 a:hover {
-  color: #90ee90;
+  color: #90ee90; /* Light Green hover */
 }
 
 small {
