@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+}
+
+#menuToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+#menuToggle input {
+  display: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 6px 0;
+  background: #333;
+  transition: 0.4s;
+}
+
+#slideMenu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+
+#slideMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#slideMenu ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #444;
+}
+
+#slideMenu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+#slideMenu ul li a small {
+  display: block;
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 4px;
+}
+
+#toggleCheckbox:checked ~ #slideMenu {
+  left: 0;
+}
