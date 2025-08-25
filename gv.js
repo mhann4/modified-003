@@ -1,5 +1,3 @@
-/* gv.js */
-
 // Menu Functions
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
@@ -18,6 +16,11 @@ window.addEventListener('popstate', (event) => {
     toggleMenu();
   }
 });
+
+// Browser ရဲ့ back key အတိုင်း အလုပ်လုပ်မယ့် function အသစ်
+function goBack() {
+  window.history.back();
+}
 
 // Video Data
 const videoData = [
