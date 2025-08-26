@@ -17,6 +17,11 @@ window.addEventListener('popstate', (event) => {
   }
 });
 
+// Browser's back key action
+function goBack() {
+  window.history.back();
+}
+
 // Video Data
 const videoData = [
   { title: "App and bonus", thumb: "images/app-and-bonus.png", video: "1P5Aa179THk-2qIDFp8KsSmVJoY3eHRtw" },
@@ -76,4 +81,3 @@ searchInput.addEventListener('input', () => {
 
 // Initial render of all videos on page load
 renderVideos(videoData);
-
