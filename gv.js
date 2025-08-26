@@ -81,3 +81,20 @@ searchInput.addEventListener('input', () => {
 
 // Initial render of all videos on page load
 renderVideos(videoData);
+
+// Function to show the giveaway modal
+function showGiveawayModal() {
+  const modal = document.getElementById('giveawayModal');
+  modal.classList.add('active');
+}
+
+// Function to close the giveaway modal
+function closeGiveawayModal() {
+  const modal = document.getElementById('giveawayModal');
+  modal.classList.remove('active');
+}
+
+// Show the modal when the page loads
+window.onload = function() {
+  showGiveawayModal();
+};
