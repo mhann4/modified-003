@@ -169,3 +169,65 @@ h1 {
   cursor: pointer;
   margin-bottom: 5px;
 }
+/* Pop-up Modal Styles */
+.giveaway-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1002; /* sidebar ထက် ပိုမြင့်ရပါမယ် */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.giveaway-modal.active {
+  display: flex;
+}
+
+.giveaway-modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+
+.giveaway-popup-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.close-giveaway-btn {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-giveaway-btn:hover,
+.close-giveaway-btn:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.giveaway-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #90ee90;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
