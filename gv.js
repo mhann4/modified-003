@@ -39,6 +39,9 @@ const videoData = [
 
 const searchInput = document.getElementById('searchInput');
 const videoGrid = document.getElementById('videoGrid');
+const videoModal = document.getElementById('videoModal');
+const modalContent = videoModal.querySelector('.modal-content');
+const closeBtn = videoModal.querySelector('.close-btn');
 
 function renderVideos(filteredVideos) {
   videoGrid.innerHTML = '';
@@ -59,18 +62,35 @@ function renderVideos(filteredVideos) {
 }
 
 function openModal(videoId) {
-  const modal = document.getElementById('videoModal');
-  const frame = document.getElementById('videoFrame');
-  frame.src = `https://drive.google.com/file/d/${videoId}/preview`;
-  modal.style.display = 'flex';
+  // modal content ကို ရှင်းပစ်ပါ
+  modalContent.innerHTML = '';
+  // ဗီဒီယိုပြသဖို့အတွက် <video> tag အသစ်ဖန်တီးပါ
+  const videoPlayer = document.createElement('video');
+  videoPlayer.id = 'videoPlayer';
+  videoPlayer.controls = true;
+  videoPlayer.autoplay = true;
+  videoPlayer.innerHTML = `<source src="https://drive.google.com/uc?export=download&id=${videoId}" type="video/mp4">
+                           Your browser does not support the video tag.`;
+  
+  // close button ကို ပြန်ထည့်ပါ
+  const closeButton = document.createElement('div');
+  closeButton.className = 'close-btn';
+  closeButton.onclick = closeModal;
+  closeButton.innerHTML = '✖';
+
+  modalContent.appendChild(closeButton);
+  modalContent.appendChild(videoPlayer);
+  videoModal.style.display = 'flex';
   history.pushState({ modalOpen: true }, '');
 }
 
 function closeModal() {
-  const modal = document.getElementById('videoModal');
-  const frame = document.getElementById('videoFrame');
-  frame.src = '';
-  modal.style.display = 'none';
+  const videoPlayer = document.getElementById('videoPlayer');
+  if (videoPlayer) {
+    videoPlayer.pause();
+    videoPlayer.src = '';
+  }
+  videoModal.style.display = 'none';
 }
 
 searchInput.addEventListener('input', () => {
@@ -81,3 +101,4 @@ searchInput.addEventListener('input', () => {
 
 // Initial render of all videos on page load
 renderVideos(videoData);
+
