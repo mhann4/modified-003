@@ -17,7 +17,7 @@ window.addEventListener('popstate', (event) => {
   }
 });
 
-// Browser's back key action
+// Browser ရဲ့ back key အတိုင်း အလုပ်လုပ်မယ့် function အသစ်
 function goBack() {
   window.history.back();
 }
