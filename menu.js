@@ -1,11 +1,9 @@
 Document.addEventListener("DOMContentLoaded", () => {
   const checkbox = document.getElementById("toggleCheckbox");
   checkbox.checked = true; // Auto-open menu on page load
-});
 
-window.addEventListener('popstate', function(event) {
-  // Check if we're on the main menu page. If so, exit the app.
-  if (window.location.href.includes('menu.html')) {
-    window.close(); // or history.go(-1);
-  }
+  // Clear browser history when the menu page is loaded
+  // This prevents the user from going back to a previous page
+  // and ensures the phone's back key will exit the app from this page.
+  history.replaceState(null, null, location.href);
 });
