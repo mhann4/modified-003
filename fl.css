@@ -1,38 +1,4 @@
 /* fl.css */
-/* Styles for the sidebar and overlay */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -240px;
-  width: 240px;
-  height: 100%;
-  background: #2e2e2e;
-  padding: 64px 20px 24px;
-  box-sizing: border-box;
-  transition: left 0.25s ease;
-  z-index: 1001;
-}
-.sidebar.active {
-  left: 0;
-}
-.sidebar a {
-  display: block;
-  color: #ADD8E6;
-  font-size: 20px;
-  text-decoration: none;
-  margin-bottom: 25px;
-}
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 1000;
-  display: none;
-}
-.overlay.active {
-  display: block;
-}
-
 body {
   background-color: #111;
   color: #fff;
