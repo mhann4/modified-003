@@ -1,63 +1,68 @@
 /* gw.css */
 
-/* Change body background to black */
 body {
   background-color: #000000;
+  margin: 0;
+  font-family: sans-serif;
+  color: #fff;
 }
 
-/* Container for the image, making it responsive */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+/* Container for the image, centered on the page */
 .giveaway-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90%; /* Adjust as needed */
+  max-width: 400px; /* Adjust the width to make the image smaller */
+  margin: 20px auto; /* Center the container */
 }
 
 /* Make the image responsive and fit inside its container */
 .giveaway-image {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Slightly rounded corners for the image */
+  border-radius: 8px;
 }
 
-/* Contact Button Styles */
+/* Contact Button Container - centered below the image */
 .contact-button-container {
   text-align: center;
   margin-top: 30px;
 }
 
+/* Premium Button Styles */
 .contact-button {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 15px 35px;
   background-color: #90ee90; /* Light Green */
   color: #000;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px; /* Pill shape for a premium feel */
   font-weight: bold;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(144, 238, 144, 0.4);
+  transition: all 0.3s ease;
 }
 
 .contact-button:hover {
   background-color: #72b272;
+  box-shadow: 0 6px 20px rgba(144, 238, 144, 0.6);
+  transform: translateY(-2px);
 }
 
-/* Add style for the main title to be visible on black background */
-h1 {
-  color: #fff;
-  text-align: center;
-  margin: 20px 0 10px;
-  font-size: 1.5rem;
+.contact-button:active {
+  transform: translateY(0);
 }
 
-/* Menu Button style to make it visible */
+/* Back Button Style */
 .menu-button {
   position: fixed;
   top: 10px;
@@ -75,8 +80,4 @@ h1 {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
-
-.menu-button:hover {
-  background: #555;
 }
