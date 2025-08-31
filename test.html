@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Match</title>
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <a href="menu.html" class="menu-button" aria-label="Back to menu">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+
+  <div class="match-card" id="matchCard">
+    <div class="match-info" id="matchInfo">
+      <div class="team">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png" alt="Liverpool Logo">
+        <h3>Liverpool</h3>
+      </div>
+      <div class="vs">Vs</div>
+      <div class="team">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png" alt="Arsenal Logo">
+        <h3>Arsenal</h3>
+      </div>
+    </div>
+    <div class="match-details">
+      <p>Sun, Aug 31</p>
+      <p>10:00 p.m</p>
+    </div>
+    
+    <div class="quality-options" id="qualityOptions" style="display: none;">
+      <h2>Liverpool Vs Arsenal</h2>
+      <a href="#" class="quality-button" onclick="loadVideo('hd')">HD</a>
+      <a href="#" class="quality-button" onclick="loadVideo('sd')">SD</a>
+    </div>
+
+  </div>
+
+  <div class="video-container" id="videoContainer" style="display: none;">
+    <iframe id="videoFrame" src="https://okwintv.vip/livestream/12391" 
+      width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <script src="test.js"></script>
+</body>
+</html>
