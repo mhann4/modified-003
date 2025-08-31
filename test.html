@@ -32,15 +32,16 @@
     
     <div class="quality-options" id="qualityOptions" style="display: none;">
       <h2>Liverpool Vs Arsenal</h2>
-      <a href="#" class="quality-button" onclick="loadVideo()">HD</a>
-      <a href="#" class="quality-button" onclick="loadVideo()">SD</a>
+      <a href="#" class="quality-button" onclick="loadVideo('hd')">HD</a>
+      <a href="#" class="quality-button" onclick="loadVideo('sd')">SD</a>
     </div>
-
   </div>
 
   <div class="video-container" id="videoContainer" style="display: none;">
-    <iframe id="videoFrame" src="https://okwintv.vip/livestream/12391" 
-      width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+    <iframe id="videoFrame" src="" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+    <div class="fullscreen-button-container">
+      <button class="fullscreen-button" onclick="goFullscreen()"><i class="fas fa-expand"></i> Full Screen</button>
+    </div>
   </div>
 
   <script src="test.js"></script>
