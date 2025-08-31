@@ -9,14 +9,11 @@ document.getElementById('matchCard').addEventListener('click', function() {
   qualityOptions.style.display = 'block';
 });
 
-function loadVideo(quality) {
+function loadVideo() {
   const matchCard = document.getElementById('matchCard');
   const videoContainer = document.getElementById('videoContainer');
   
   // Hide the match card and show the video container
   matchCard.style.display = 'none';
   videoContainer.style.display = 'block';
-  
-  // Note: The iframe is already loaded with the URL in HTML,
-  // so this function just needs to handle the display of elements.
 }
