@@ -16,16 +16,15 @@
   <div class="main-container">
     <h1>Live Stream</h1>
     <div class="stream-buttons">
-      <a href="https://okwintv.vip/" class="quality-button hd-button" target="_blank">HD ကြည့်ရန်</a>
-      <a href="https://socolive99.ac/" class="quality-button sd-button" target="_blank">SD ကြည့်ရန်</a>
-    </div>
-    
-    <div class="ad-banner">
-      1xbet, Loboki, 555mix တို့ကို **Mhann4** ဆီမှာ လာရောက် ဆော့ကစားနိုင်ပါသည်။
+      <a href="#" class="quality-button hd-button" onclick="loadStream('hd')">HD ကြည့်ရန်</a>
+      <a href="#" class="quality-button sd-button" onclick="loadStream('sd')">SD ကြည့်ရန်</a>
     </div>
   </div>
 
-  <div id="google_translate_element" style="display:none;"></div>
+  <div id="stream-container" class="stream-container" style="display: none;">
+    <div id="google_translate_element" class="google-translate-button"></div>
+    <iframe id="liveStream" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
 
   <script src="test.js"></script>
 </body>
