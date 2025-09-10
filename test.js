@@ -1,24 +1,30 @@
-// Function to initialize Google Translate Element
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'my', includedLanguages: 'en'}, 'google_translate_element');
-}
+function loadStream(quality) {
+  const mainContainer = document.querySelector('.main-container');
+  const streamContainer = document.getElementById('stream-container');
+  const liveStreamFrame = document.getElementById('liveStream');
 
-// Function to trigger the translation to English
-function translatePageToEnglish() {
-  const translateElement = document.querySelector('.goog-te-combo');
-  if (translateElement) {
-    translateElement.value = 'en';
-    translateElement.dispatchEvent(new Event('change'));
+  let streamUrl = '';
+  if (quality === 'hd') {
+    streamUrl = 'https://okwintv.vip/';
+  } else if (quality === 'sd') {
+    streamUrl = 'https://socolive99.ac/';
   }
+
+  liveStreamFrame.src = streamUrl;
+  
+  // Hide main container and show stream container
+  mainContainer.style.display = 'none';
+  streamContainer.style.display = 'block';
 }
 
-// Automatically translate the page to English when it loads
-// We use a slight delay to ensure the translate script has loaded
-window.onload = function() {
-  setTimeout(translatePageToEnglish, 1000); // 1 second delay
-};
+// Google Translate functions
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'my',
+    includedLanguages: 'en'
+  }, 'google_translate_element');
+}
 
-// Add the Google Translate script to the body
 (function() {
   const script = document.createElement('script');
   script.type = 'text/javascript';
