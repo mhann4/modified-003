@@ -6,12 +6,24 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "Mhann4",
-  "start_url": "/",
+  "start_url": "/menu.html",
   "theme_color": "#3bff9e",
   "id": "Mhann4",
   "description": "Guide Videos, Giveaway, Football Live stream, Goal score, 1xbet, Loboki , 555mix",
   "categories": [
     "entertainment",
     "sports"
+  ],
+  "icons": [
+    {
+      "src": "/images/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
